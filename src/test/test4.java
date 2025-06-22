@@ -1,0 +1,28 @@
+package test;
+
+public class test4{
+    static String[] s = new String[3];
+
+    static void func(String[]s, int size){
+        for(int i=1; i<size; i++){
+            if(s[i-1]== s[i]){
+                System.out.print("O");
+            }else{
+                System.out.print("N");
+            }
+        }
+        for (String m : s){
+            System.out.print(m);
+        }
+    }
+
+
+    public static void main(String[] args){
+        s[0] = "A";
+        s[1] = "A";
+        s[2] = new String("A");
+
+        func(s, 3);
+    }
+}
+
